@@ -22,7 +22,6 @@ To implement HASH ALGORITHM
 ```
 #include <stdio.h>
 #include <string.h>
-
 unsigned int simple_hash(const char *message) {
     unsigned int hash = 0;
     int i;
@@ -31,21 +30,16 @@ unsigned int simple_hash(const char *message) {
     }
     return hash;
 }
-
 int main() {
     char message[256];
     unsigned int hash_value;
-
     printf("Enter the message to hash: ");
     fgets(message, sizeof(message), stdin);
     message[strcspn(message, "\n")] = '\0';
-
     hash_value = simple_hash(message);
     printf("Generated hash value: %u\n", hash_value);
-
     return 0;
 }
-
 ```
 
 ## Output:
